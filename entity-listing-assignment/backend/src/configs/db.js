@@ -2,6 +2,6 @@ const mongoose=require("mongoose")
 
 
 const connect=()=>{
-    return mongoose.connect("mongodb://127.0.0.1:27017/entity-listing")
+    return mongoose.connect("mongodb+srv://tush:ahire98@entitylisting.pyzjw.mongodb.net/entitylisting?retryWrites=true&w=majority")
 }
 module.exports=connect
