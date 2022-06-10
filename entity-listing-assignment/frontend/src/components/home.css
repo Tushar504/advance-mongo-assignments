@@ -1,0 +1,39 @@
+.Info{
+    width:50%;
+    margin:auto;
+    margin-top:50px;
+    padding:10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    font-weight: bold;
+    background-color:white;
+    color: black;
+   font-family: Book Antiqua;
+}
+.Heading{
+    width: 100%;
+    text-align: center;
+    margin:auto;
+    font-size:20px
+}
+.Statement{
+    width:300px;
+    margin:auto
+}
+.Head2{
+    font-size:20px
+}
+.ButtonDiv{
+    width:100%;
+    text-align:center;
+    margin-top:25px
+}
+
+@media only screen and (min-width:300px)and (max-width:700px){
+    .Info{
+        width:90%;
+    }
+    .Heading{
+      
+        font-size:15px
+    }
+}

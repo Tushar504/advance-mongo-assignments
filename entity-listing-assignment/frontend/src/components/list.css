@@ -1,3 +1,9 @@
+.OuterDiv{
+    width: 100%;
+    text-align: center;
+    font-family: Book Antiqua;
+    font-weight: bold;
+}
 .mainDiv{
     width: 70%;
     margin: auto;
@@ -5,8 +11,39 @@
     grid-template-columns: repeat(2,1fr);
     grid-gap: 50px;
     margin-top: 50px;
+    margin-bottom: 50px;
+}
+.inDiv{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+   font-size: 20px;
+    font-weight: bold;
+
+    
 }
 .inDiv>img{
      width: 100%;
      height: 300px;
+}
+.SelectTag{
+    height:36px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:20px
+}
+.SelectTagDiv{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+@media only screen and (min-width:300px)and (max-width:700px){
+    .mainDiv{
+       
+       
+        grid-template-columns: repeat(1,1fr);
+      
+    }
 }
