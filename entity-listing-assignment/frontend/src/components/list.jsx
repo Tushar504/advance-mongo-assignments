@@ -73,7 +73,7 @@ export const List=()=>{
                    </div>)
                })}
            </div>:<div style={{width:'70%',margin:'auto',textAlign:'center',marginTop:'50px'}}> <CircularProgress color="inherit" /></div>}
-            <div>
+            <div className="ButonsDiv">
                 { show ?pages.map((e)=>{
                     
                     return Number(page)===e ?<Button  key={e}  variant="contained" disabled>{e}</Button> :<Button onClick={()=> { setshow(false) ; navigate(`/list?page=${e}&pagesize=6&filter=${filter}&sort=${sort}`)}} key={e}  variant="contained">{e}</Button>
