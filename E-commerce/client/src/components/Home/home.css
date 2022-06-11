@@ -1,0 +1,14 @@
+.CateDiv{
+    position:relative;
+    top:300px;
+    width:60%;
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.Cate{
+    width:150px;
+    text-align: center;
+    margin: 15px;
+}

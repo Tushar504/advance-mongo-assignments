@@ -7,13 +7,13 @@ const userSchema=new mongoose.Schema({
     Password: { type: String, required: true },
     Address:[
         {
-          line_1: { type: String, required: false },
-          city: { type: String, required: false },
-          state: { type: String, required: false },
-          add_type: { type: String, required: false, default: "home" },
+          Street: { type: String, required: false },
+          City: { type: String, required: false },
+          State: { type: String, required: false },
+          Add_type: { type: String, required: false, default: "home" },
         },
       ],
-       Usertype:{type:String,required:true}
+    
 
 
 },{

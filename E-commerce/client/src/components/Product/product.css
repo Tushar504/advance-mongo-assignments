@@ -1,0 +1,20 @@
+.ProdMainDiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    position: relative;
+    top:50px;
+    grid-gap: 20px;
+    padding: 10px;
+}
+.ProdDiv{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+}
+.ProdDiv>img{
+    width:100%;
+    height: 500px;
+    
+}
+.BrandName{
+    color:rgb(111, 189, 189);
+}

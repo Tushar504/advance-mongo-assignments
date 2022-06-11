@@ -17,7 +17,7 @@ router.get("/",async(req,res)=>{
 
 router.post("/create",async(req,res)=>{
     try {
-        let brand=await Brand.create(req.body).lean().exec()
+        let brand=await Brand.create(req.body)
         res.status(201).send({ data: brand, message: "success" })
     } 
     catch (error) {

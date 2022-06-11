@@ -2,22 +2,33 @@ const express=require("express")
 const User=require("../models/user.model")
 const router=express.Router()
 
-router.get("/",async(req,res)=>{
+router.post("/",async(req,res)=>{
     try {
-        const users = await User.find().lean().exec();
+        const user= await User.findOne({Email:{$eq:req.body.Email}})
+        console.log(req.body)
+        console.log(user)
+        if(user){
+              if(user.Password===req.body.Password){
+                return   res.status(200).send({ data: user, message: "success" });
+              }
+        }
+        return res.status(200).send({message:"Email Not Registered"})
 
-        res.status(200).send({ data: users, message: "success" });
+      
     } 
     catch (error) {
         res.status(500).send({ data: [], message: "error", error: error.message });
     }
 })
 
-
 router.post("/create",async(req,res)=>{
     try {
-        const user = await User.create(req.body);
-        return res.status(201).send({ data: user, message: "success" });
+        let user=await User.findOne({Email:{$eq:req.body.Email}})
+       if(user){
+         return res.status(201).send({message:"Email Already Registered"})
+       }
+       user = await User.create(req.body);
+       return res.status(201).send({ data: user, message: "success" });
     } 
     catch (error) {
         res.status(500).send({ data: [], message: "error", error: error.message });

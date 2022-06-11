@@ -4,7 +4,7 @@ const router=express.Router()
 
 router.get("/",async(req,res)=>{
     try {
-        const products = await Product.find().populate("Brand_ID").lean().exec();
+        const products = await Product.find().populate("Brand_ID").populate("Category_ID").lean().exec();
 
            res.status(200).send({data:products,message:"success"})
     } 
@@ -16,7 +16,7 @@ router.get("/",async(req,res)=>{
 
 router.post("/create",async(req,res)=>{
     try {
-           let product=await Product.create(req.body).lean().exec()
+           let product=await Product.create(req.body)
 
            return res.status(201).send({ data: product, message: "success" });
     } 
@@ -39,6 +39,15 @@ router.get("/:id",async(req,res)=>{
     }
 })
 
+router.get("/category/:id",async(req,res)=>{
+      try {
+           const products=await Product.find({Category_ID:{$eq:req.params.id}}).populate("Brand_ID").lean().exec()
+           return res.status(201).send({data:products,message:"success"})
+      } 
+      catch (error) {
+        return   res.status(500).send({ data: [], message: "error", error: error.message });
+      }
+})
 
 router.patch("/:id/edit",async(req,res)=>{
     try {
