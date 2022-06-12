@@ -33,6 +33,7 @@ export const Login=()=>{
                    }
                    else{
                     alert(`${user.message}`)
+                    localStorage.setItem("User_Id",user.data._id)
                     navigate("/")
                    }
            } 

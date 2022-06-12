@@ -1,0 +1,32 @@
+.cartMainDiv{
+    width: 75%;
+    position: relative;
+    top: 100px;
+    padding: 10px;
+}
+.cartInDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 150px ;
+}
+.cartInDiv>img{
+    width: 10%;
+}
+.CountDiv{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    border: 1px solid red;
+    margin-top: 75px;
+}
+.CountDiv>h6{
+    margin: 0px;
+    
+}
+.cartInDiv>h6{
+      margin-top: 75px;
+      font-size: 25px;
+}
+
